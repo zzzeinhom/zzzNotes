@@ -12,7 +12,14 @@ class NotesView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
-              context: context, builder: (context) => const AddNoteSheet());
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(32),
+                  topRight: Radius.circular(32),
+                ),
+              ),
+              context: context,
+              builder: (context) => const AddNoteSheet());
         },
         backgroundColor: Color(0xFF3958F8),
         foregroundColor: Colors.white,
@@ -20,7 +27,7 @@ class NotesView extends StatelessWidget {
         child: Icon(
           Icons.add,
           size: 32,
-        ), // Ensures the button is perfectly circular
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
