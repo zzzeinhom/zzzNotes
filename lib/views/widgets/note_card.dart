@@ -8,35 +8,40 @@ class NoteCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.secondary,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(16),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisSize: MainAxisSize.min,
         children: [
           ListTile(
             contentPadding: EdgeInsets.zero,
             title: Padding(
               padding: const EdgeInsets.only(bottom: 24),
-              child: Text('How to write thanks you note',
-                  style: Theme.of(context).textTheme.headlineMedium),
+              child: Text(
+                'How to write thank you note',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
             ),
-            subtitle: Text('Note Content',
-                style: Theme.of(context).textTheme.titleSmall,
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis),
+            subtitle: Text(
+              'Note Content (vary this text to test dynamic height)',
+              style: Theme.of(context).textTheme.titleSmall,
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+            ),
             trailing: IconButton(
               icon: const Icon(Icons.delete_outline),
-              iconSize: 30,
+              iconSize: 28,
               color: Theme.of(context).colorScheme.onSecondary,
               onPressed: () {},
             ),
           ),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 16),
-            height: 16,
-            width: 16,
-            decoration: BoxDecoration(
+            margin: const EdgeInsets.only(top: 8),
+            height: 12,
+            width: 12,
+            decoration: const BoxDecoration(
               color: Colors.blue,
               shape: BoxShape.circle,
             ),
