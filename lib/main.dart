@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:zzznotes/views/notes_view.dart';
 import 'package:zzznotes/themes/themes.dart';
 
-
 void main() {
   runApp(const ZZZNaotes());
 }
@@ -15,6 +14,7 @@ class ZZZNaotes extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: darkTheme,
+      color: Theme.of(context).colorScheme.primary,
       home: NotesView(),
     );
   }
