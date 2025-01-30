@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zzznotes/views/widgets/note_card.dart';
 import 'package:zzznotes/views/widgets/notes_app_bar.dart';
 
 class NotesVieBody extends StatelessWidget {
@@ -9,7 +10,7 @@ class NotesVieBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
       child: Column(
-        children: const [NotesAppBar()],
+        children: const [NotesAppBar(), NoteCard()],
       ),
     );
   }

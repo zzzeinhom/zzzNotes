@@ -53,7 +53,7 @@ ThemeData lightTheme = ThemeData(
           titleSmall: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Color(0xFF9B9EA6),
           ),
           labelLarge: TextStyle(
             fontSize: 16,
@@ -127,7 +127,7 @@ ThemeData darkTheme = ThemeData(
       titleSmall: TextStyle(
         fontSize: 12,
         fontWeight: FontWeight.bold,
-        color: Colors.white,
+        color: Color(0xFF6E738F),
       ),
       labelLarge: TextStyle(
         fontSize: 16,
