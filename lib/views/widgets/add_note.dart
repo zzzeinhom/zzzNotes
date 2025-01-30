@@ -36,6 +36,8 @@ class _AddNoteSheetState extends State<AddNoteSheet> {
             ),
             NoteTextField(
                 hintText: "Content",
+                maxLength: 500,
+                maxLines: 2,
                 style: Theme.of(context).textTheme.headlineSmall),
             SizedBox(
               height: 24,
