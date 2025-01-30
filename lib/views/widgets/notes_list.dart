@@ -9,12 +9,12 @@ class NotesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: StaggeredGridView.countBuilder(
+        padding: const EdgeInsets.only(top: 16),
         crossAxisCount: 2,
         crossAxisSpacing: 8,
-        mainAxisSpacing: 8, 
+        mainAxisSpacing: 8,
         itemCount: 10,
-        staggeredTileBuilder: (int index) =>
-            const StaggeredTile.fit(1),
+        staggeredTileBuilder: (int index) => const StaggeredTile.fit(1),
         itemBuilder: (context, index) => const NoteCard(),
       ),
     );
