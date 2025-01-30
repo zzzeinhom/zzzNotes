@@ -5,7 +5,7 @@ ThemeData lightTheme = ThemeData(
     colorScheme: ColorScheme.light(
         surface: Colors.white,
         primary: Color(0xFFF0F4F9),
-        secondary: Color(0xFFFDFFFF),
+        secondary: Color.fromARGB(255, 231, 238, 243),
         onSurface: Colors.black,
         onPrimary: Colors.black,
         onSecondary: Color(0xFF9B9EA6)),

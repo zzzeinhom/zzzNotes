@@ -48,7 +48,7 @@ class _AddNoteSheetState extends State<AddNoteSheet> {
                     Icons.person_outlined,
                     color: _selectedCategory == CategoryType.personal
                         ? Theme.of(context).colorScheme.onPrimary
-                        : Theme.of(context).colorScheme.primary,
+                        : Theme.of(context).colorScheme.secondary,
                   ),
                   onPressed: () => _selectCategory(CategoryType.personal),
                 ),
@@ -57,7 +57,7 @@ class _AddNoteSheetState extends State<AddNoteSheet> {
                     Icons.work_outline,
                     color: _selectedCategory == CategoryType.work
                         ? Theme.of(context).colorScheme.onPrimary
-                        : Theme.of(context).colorScheme.primary,
+                        : Theme.of(context).colorScheme.secondary,
                   ),
                   onPressed: () => _selectCategory(CategoryType.work),
                 ),
@@ -66,7 +66,7 @@ class _AddNoteSheetState extends State<AddNoteSheet> {
                     Icons.school_outlined,
                     color: _selectedCategory == CategoryType.school
                         ? Theme.of(context).colorScheme.onPrimary
-                        : Theme.of(context).colorScheme.primary,
+                        : Theme.of(context).colorScheme.secondary,
                   ),
                   onPressed: () => _selectCategory(CategoryType.school),
                 ),
@@ -75,7 +75,7 @@ class _AddNoteSheetState extends State<AddNoteSheet> {
                     Icons.color_lens_outlined,
                     color: _selectedCategory == CategoryType.lifestyle
                         ? Theme.of(context).colorScheme.onPrimary
-                        : Theme.of(context).colorScheme.primary,
+                        : Theme.of(context).colorScheme.secondary,
                   ),
                   onPressed: () => _selectCategory(CategoryType.lifestyle),
                 ),
