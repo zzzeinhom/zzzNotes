@@ -5,7 +5,6 @@ import 'package:zzznotes/views/note_view.dart';
 class NoteCard extends StatelessWidget {
   const NoteCard({super.key, required this.note});
 
-
   final NoteModel note;
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class NoteCard extends StatelessWidget {
           color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(16),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisSize: MainAxisSize.min,

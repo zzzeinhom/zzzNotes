@@ -26,17 +26,17 @@ ThemeData lightTheme = ThemeData(
         color: Colors.black,
       ),
       bodyLarge: TextStyle(
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: FontWeight.normal,
         color: Colors.black,
       ),
       bodyMedium: TextStyle(
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: FontWeight.normal,
         color: Colors.black,
       ),
       bodySmall: TextStyle(
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: FontWeight.normal,
         color: Colors.black,
       ),
@@ -99,17 +99,17 @@ ThemeData darkTheme = ThemeData(
         color: Colors.white,
       ),
       bodyLarge: TextStyle(
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: FontWeight.normal,
         color: Colors.white,
       ),
       bodyMedium: TextStyle(
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: FontWeight.normal,
         color: Colors.white,
       ),
       bodySmall: TextStyle(
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: FontWeight.normal,
         color: Colors.white,
       ),
