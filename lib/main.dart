@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:zzznotes/models/note_model.dart';
 import 'package:zzznotes/views/notes_view.dart';
 import 'package:zzznotes/themes/themes.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-void main() async{
+void main() async {
   await Hive.initFlutter();
   await Hive.openBox('notes');
+  Hive.registerAdapter(NoteModelAdapter());
   runApp(const ZZZNaotes());
 }
 

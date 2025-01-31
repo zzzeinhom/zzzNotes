@@ -6,17 +6,17 @@ part of 'note_model.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class NoteNodelAdapter extends TypeAdapter<NoteNodel> {
+class NoteModelAdapter extends TypeAdapter<NoteModel> {
   @override
   final int typeId = 0;
 
   @override
-  NoteNodel read(BinaryReader reader) {
+  NoteModel read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return NoteNodel(
+    return NoteModel(
       fields[2] as String,
       fields[4] as Color,
       title: fields[0] as String,
@@ -25,7 +25,7 @@ class NoteNodelAdapter extends TypeAdapter<NoteNodel> {
   }
 
   @override
-  void write(BinaryWriter writer, NoteNodel obj) {
+  void write(BinaryWriter writer, NoteModel obj) {
     writer
       ..writeByte(5)
       ..writeByte(0)
@@ -46,7 +46,7 @@ class NoteNodelAdapter extends TypeAdapter<NoteNodel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is NoteNodelAdapter &&
+      other is NoteModelAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
