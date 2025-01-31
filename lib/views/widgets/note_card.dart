@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zzznotes/cubits/notes_cubit/notes_cubit.dart';
 import 'package:zzznotes/models/note_model.dart';
 import 'package:zzznotes/views/note_view.dart';
 
@@ -57,6 +59,7 @@ class NoteCard extends StatelessWidget {
                         TextButton(
                           onPressed: () {
                             note.delete();
+                            BlocProvider.of<NotesCubit>(context).getAllNotes();
                             Navigator.pop(context);
                           },
                           child: Text("Delete",
