@@ -25,8 +25,11 @@ class _NotesViewBodyState extends State<NotesViewBody> {
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
       child: Column(
         children: [
+          SizedBox(height: 24),
           NotesAppBar(),
+          SizedBox(height: 24),
           NotesSearchBar(),
+          SizedBox(height: 24),
           NotesList(),
         ],
       ),
