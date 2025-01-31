@@ -25,7 +25,7 @@ class NoteView extends StatelessWidget {
           Expanded(
             child: NoteTextField(
                 maxLength: 500,
-                maxLines: 500,
+                maxLines: MediaQuery.of(context).size.height ~/ 24,
                 hintText: "Content",
                 style: Theme.of(context).textTheme.headlineSmall),
           ),

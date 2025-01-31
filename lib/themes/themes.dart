@@ -41,34 +41,34 @@ ThemeData lightTheme = ThemeData(
         color: Colors.black,
       ),
       titleLarge: TextStyle(
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: FontWeight.bold,
         color: Colors.black,
       ),
       titleMedium: TextStyle(
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: FontWeight.bold,
         color: Colors.black,
       ),
       titleSmall: TextStyle(
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: FontWeight.bold,
-        color: Color(0xFF9B9EA6),
+        color: Colors.black,
       ),
       labelLarge: TextStyle(
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: FontWeight.normal,
-        color: Colors.black,
+        color: Color(0xFF9B9EA6),
       ),
       labelMedium: TextStyle(
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: FontWeight.normal,
-        color: Colors.black,
+        color: Color(0xFF9B9EA6),
       ),
       labelSmall: TextStyle(
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: FontWeight.normal,
-        color: Colors.black,
+        color: Color(0xFF9B9EA6),
       ),
     ));
 
@@ -114,33 +114,33 @@ ThemeData darkTheme = ThemeData(
         color: Colors.white,
       ),
       titleLarge: TextStyle(
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: FontWeight.bold,
         color: Colors.white,
       ),
       titleMedium: TextStyle(
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: FontWeight.bold,
         color: Colors.white,
       ),
       titleSmall: TextStyle(
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: FontWeight.bold,
-        color: Color(0xFF6E738F),
+        color: Colors.white,
       ),
       labelLarge: TextStyle(
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: FontWeight.normal,
-        color: Colors.white,
+        color: Color(0xFF6E738F),
       ),
       labelMedium: TextStyle(
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: FontWeight.normal,
-        color: Colors.white,
+        color: Color(0xFF6E738F),
       ),
       labelSmall: TextStyle(
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: FontWeight.normal,
-        color: Colors.white,
+        color: Color(0xFF6E738F),
       ),
     ));

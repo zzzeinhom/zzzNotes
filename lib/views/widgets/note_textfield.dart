@@ -7,20 +7,33 @@ class NoteTextField extends StatelessWidget {
     required this.style,
     this.maxLength = 200,
     this.maxLines = 1,
+    this.onSaved,
+    this.hintStyle,
   });
 
   final String hintText;
   final TextStyle? style;
+  final TextStyle? hintStyle;
   final int maxLength;
   final int maxLines;
+  final void Function(String?)? onSaved;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      onSaved: onSaved,
+      validator: (value) {
+        if (value?.isEmpty ?? true) {
+          return 'This field is required';
+        }
+        return null;
+      },
       maxLength: maxLength,
       maxLines: maxLines,
       decoration: InputDecoration(
         hintText: hintText,
+        hintStyle: hintStyle,
+        counterText: '',
         border: InputBorder.none,
         enabledBorder: InputBorder.none,
         focusedBorder: InputBorder.none,

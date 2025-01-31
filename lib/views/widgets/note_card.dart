@@ -30,7 +30,7 @@ class NoteCard extends StatelessWidget {
               ),
               subtitle: Text(
                 'Note Content (vary this text to test dynamic height)',
-                style: Theme.of(context).textTheme.titleSmall,
+                style: Theme.of(context).textTheme.labelSmall,
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
               ),
