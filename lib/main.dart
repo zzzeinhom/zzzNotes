@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zzznotes/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:zzznotes/models/note_model.dart';
 import 'package:zzznotes/views/notes_view.dart';
 import 'package:zzznotes/themes/themes.dart';
@@ -16,11 +18,18 @@ class ZZZNaotes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: darkTheme,
-      color: Theme.of(context).colorScheme.primary,
-      home: NotesView(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => AddNoteCubit()),
+        // BlocProvider(create: (context) => DeleteNoteCubit()),
+        // BlocProvider(create: (context) => UpdateNoteCubit()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: darkTheme,
+        color: Theme.of(context).colorScheme.primary,
+        home: NotesView(),
+      ),
     );
   }
 }
