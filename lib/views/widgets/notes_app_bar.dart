@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class NotesAppBar extends StatelessWidget {
   const NotesAppBar(
-      {super.key, this.title = 'Keep Notes', this.icon = Icons.person_2_outlined});
+      {super.key,
+      this.title = 'Keep Notes',
+      this.icon = Icons.person_2_outlined});
 
   final String title;
   final IconData icon;
@@ -16,11 +18,17 @@ class NotesAppBar extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis),
         ),
-        IconButton(
-          icon: Icon(icon),
-          color: Theme.of(context).colorScheme.onPrimary,
-          onPressed: () {},
-          iconSize: 32,
+        Container(
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.secondary,
+            shape: BoxShape.circle,
+          ),
+          child: IconButton(
+            icon: Icon(icon),
+            color: Theme.of(context).colorScheme.onSecondary,
+            onPressed: () {},
+            iconSize: 32,
+          ),
         ),
       ],
     );

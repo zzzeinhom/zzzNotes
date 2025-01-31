@@ -13,7 +13,7 @@ class NoteCard extends StatelessWidget {
           context, MaterialPageRoute(builder: (context) => NoteView())),
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.secondary,
+          color: Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(16),
         ),
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
@@ -40,7 +40,32 @@ class NoteCard extends StatelessWidget {
                 icon: const Icon(Icons.delete_outline),
                 iconSize: 28,
                 color: Theme.of(context).colorScheme.onSecondary,
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Text("Delete Note"),
+                      content: const Text("Are you sure you want to delete?"),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text("Cancel",
+                              style: Theme.of(context).textTheme.labelSmall),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            note.delete();
+                            Navigator.pop(context);
+                          },
+                          child: Text("Delete",
+                              style: Theme.of(context).textTheme.labelSmall),
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
             ),
             Container(
