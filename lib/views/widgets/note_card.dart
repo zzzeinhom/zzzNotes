@@ -3,7 +3,6 @@ import 'package:zzznotes/views/note_view.dart';
 
 class NoteCard extends StatelessWidget {
   const NoteCard({super.key});
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
