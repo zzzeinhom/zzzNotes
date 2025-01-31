@@ -9,6 +9,7 @@ class NotesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: StaggeredGridView.countBuilder(
+        physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.only(top: 16),
         crossAxisCount: 2,
         crossAxisSpacing: 8,

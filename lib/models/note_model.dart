@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 part 'note_model.g.dart';
 
@@ -12,7 +13,7 @@ class NoteNodel extends HiveObject {
   @HiveField(3)
   final DateTime date = DateTime.now();
   @HiveField(4)
-  final int color;
+  final Color color;
 
   NoteNodel(
     this.category,

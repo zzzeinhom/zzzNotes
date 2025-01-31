@@ -18,7 +18,7 @@ class NoteNodelAdapter extends TypeAdapter<NoteNodel> {
     };
     return NoteNodel(
       fields[2] as String,
-      fields[4] as int,
+      fields[4] as Color,
       title: fields[0] as String,
       content: fields[1] as String,
     );
