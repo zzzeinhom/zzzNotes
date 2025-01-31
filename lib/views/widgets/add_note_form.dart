@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zzznotes/cubits/add_note_cubit/add_note_cubit.dart';
+import 'package:zzznotes/models/note_model.dart';
 import 'package:zzznotes/views/widgets/note_textfield.dart';
 
 class AddNoteForm extends StatefulWidget {
@@ -38,7 +41,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
     setState(() {
       _selectedCategory = type;
       _category = categoryData[type]!['name']!;
-      _color = categoryData[type]!['color']!;
+      _color = categoryData[type]!['color'].value!;
     });
   }
 
@@ -48,7 +51,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
   String _title = '';
   String _content = '';
   String _category = 'personal';
-  Color _color = const Color(0xFF4A90E2);
+  int _color = const Color(0xFF4A90E2).value;
 
   @override
   Widget build(BuildContext context) {
@@ -89,6 +92,12 @@ class _AddNoteFormState extends State<AddNoteForm> {
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
+                NoteModel note = NoteModel(
+                    title: _title,
+                    content: _content,
+                    category: _category,
+                    color: _color);
+                BlocProvider.of<AddNoteCubit>(context).addNote(note);
               } else {
                 setState(() {
                   _autovalidateMode = AutovalidateMode.onUserInteraction;

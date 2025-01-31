@@ -11,14 +11,14 @@ class NoteModel extends HiveObject {
   @HiveField(2)
   final String category;
   @HiveField(3)
-  final DateTime date = DateTime.now();
+  final String date = DateTime.now().toString();
   @HiveField(4)
-  final Color color;
+  final int color;
 
-  NoteModel(
-    this.category,
-    this.color, {
+  NoteModel({
     required this.title,
     required this.content,
+    required this.category,
+    required this.color,
   });
 }
