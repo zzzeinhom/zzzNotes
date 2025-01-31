@@ -108,5 +108,4 @@ class _AddNoteSheetState extends State<AddNoteSheet> {
   }
 }
 
-// Step 5: Add enum for categories
 enum CategoryType { personal, work, school, lifestyle }
