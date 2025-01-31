@@ -88,34 +88,40 @@ class _AddNoteFormState extends State<AddNoteForm> {
             ],
           ),
           const SizedBox(height: 32),
-          ElevatedButton(
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                NoteModel note = NoteModel(
-                    title: _title,
-                    content: _content,
-                    category: _category,
-                    color: _color);
-                BlocProvider.of<AddNoteCubit>(context).addNote(note);
-              } else {
-                setState(() {
-                  _autovalidateMode = AutovalidateMode.onUserInteraction;
-                });
-              }
+          BlocBuilder<AddNoteCubit, AddNoteState>(
+            builder: (context, state) {
+              return ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    NoteModel note = NoteModel(
+                        title: _title,
+                        content: _content,
+                        category: _category,
+                        color: _color);
+                    BlocProvider.of<AddNoteCubit>(context).addNote(note);
+                  } else {
+                    setState(() {
+                      _autovalidateMode = AutovalidateMode.onUserInteraction;
+                    });
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF3958F8),
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  minimumSize: Size(MediaQuery.of(context).size.width, 48),
+                ),
+                child: state is AddNoteLoading
+                    ? SizedBox(
+                        height: 24,
+                        width: 24,
+                        child: const CircularProgressIndicator())
+                    : const Text('Add Note'),
+              );
             },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF3958F8),
-              foregroundColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              minimumSize: Size(MediaQuery.of(context).size.width, 48),
-            ),
-            child: const Text(
-              "Add Note",
-              style: TextStyle(fontSize: 22),
-            ),
           ),
         ],
       ),
