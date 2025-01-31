@@ -1,19 +1,19 @@
-import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:intl/intl.dart';
 part 'note_model.g.dart';
 
 @HiveType(typeId: 0)
 class NoteModel extends HiveObject {
   @HiveField(0)
-  final String title;
+  String title;
   @HiveField(1)
-  final String content;
+  String content;
   @HiveField(2)
-  final String category;
+  String category;
   @HiveField(3)
-  final String date = DateTime.now().toString();
+  final String date = DateFormat('MMM d, y').format(DateTime.now());
   @HiveField(4)
-  final int color;
+  int color;
 
   NoteModel({
     required this.title,

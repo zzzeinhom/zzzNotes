@@ -12,7 +12,11 @@ class NoteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.push(
-          context, MaterialPageRoute(builder: (context) => NoteView())),
+          context,
+          MaterialPageRoute(
+              builder: (context) => NoteView(
+                    note: note,
+                  ))),
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,

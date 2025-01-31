@@ -13,5 +13,21 @@ class NotesCubit extends Cubit<NotesState> {
     emit(NotesLoaded());
   }
 
+  searchNotes(String query) {
+    if (query.isEmpty) {
+      getAllNotes();
+    } else {
+      notes = Hive.box('notes')
+          .values
+          .where((element) =>
+              element.title.toLowerCase().contains(query.toLowerCase()) ||
+              element.content.toLowerCase().contains(query.toLowerCase()))
+          .toList()
+          .cast<NoteModel>();
+      emit(NotesLoaded());
+    }
+    emit(NotesLoaded());
+  }
+
   void getNotes() {}
 }

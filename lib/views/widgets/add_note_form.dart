@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zzznotes/cubits/add_note_cubit/add_note_cubit.dart';
+import 'package:zzznotes/models/category_type.dart';
 import 'package:zzznotes/models/note_model.dart';
 import 'package:zzznotes/views/widgets/note_textfield.dart';
 
@@ -13,29 +14,6 @@ class AddNoteForm extends StatefulWidget {
 
 class _AddNoteFormState extends State<AddNoteForm> {
   CategoryType _selectedCategory = CategoryType.personal;
-
-  final Map<CategoryType, Map<String, dynamic>> categoryData = {
-    CategoryType.personal: {
-      'name': 'personal',
-      'color': Color(0xFF4A90E2),
-      'icon': Icons.person_outlined,
-    },
-    CategoryType.work: {
-      'name': 'work',
-      'color': Color(0xFFF39C12),
-      'icon': Icons.work_outlined,
-    },
-    CategoryType.school: {
-      'name': 'school',
-      'color': Color(0xFF27AE60),
-      'icon': Icons.school_outlined,
-    },
-    CategoryType.lifestyle: {
-      'name': 'lifestyle',
-      'color': Color.fromARGB(255, 172, 18, 243),
-      'icon': Icons.color_lens_outlined,
-    },
-  };
 
   void _selectCategory(CategoryType type) {
     setState(() {
@@ -144,5 +122,3 @@ class _AddNoteFormState extends State<AddNoteForm> {
     );
   }
 }
-
-enum CategoryType { personal, work, school, lifestyle }
