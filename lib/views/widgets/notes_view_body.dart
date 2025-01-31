@@ -24,6 +24,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
       child: Column(
         children: [
           NotesAppBar(),
+          
           NotesList(),
         ],
       ),

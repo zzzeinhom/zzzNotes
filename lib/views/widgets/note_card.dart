@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:zzznotes/models/note_model.dart';
 import 'package:zzznotes/views/note_view.dart';
 
 class NoteCard extends StatelessWidget {
-  const NoteCard({super.key});
+  const NoteCard({super.key, required this.note});
+
+
+  final NoteModel note;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -23,12 +27,12 @@ class NoteCard extends StatelessWidget {
               title: Padding(
                 padding: const EdgeInsets.only(bottom: 24),
                 child: Text(
-                  'How to write thank you note',
+                  note.title,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
               subtitle: Text(
-                'Note Content (vary this text to test dynamic height)',
+                note.content,
                 style: Theme.of(context).textTheme.labelSmall,
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
@@ -44,8 +48,8 @@ class NoteCard extends StatelessWidget {
               margin: const EdgeInsets.only(top: 8),
               height: 12,
               width: 12,
-              decoration: const BoxDecoration(
-                color: Colors.blue,
+              decoration: BoxDecoration(
+                color: Color(note.color),
                 shape: BoxShape.circle,
               ),
             )

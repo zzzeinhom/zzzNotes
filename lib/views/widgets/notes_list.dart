@@ -24,7 +24,7 @@ class NotesList extends StatelessWidget {
             mainAxisSpacing: 8,
             itemCount: notes.length,
             staggeredTileBuilder: (int index) => const StaggeredTile.fit(1),
-            itemBuilder: (context, index) => const NoteCard(),
+            itemBuilder: (context, index) => NoteCard(note: notes[index]),
           ),
         );
       },
