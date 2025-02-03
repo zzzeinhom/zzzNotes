@@ -13,7 +13,7 @@ class NotesList extends StatelessWidget {
     return BlocBuilder<NotesCubit, NotesState>(
       builder: (context, state) {
         List<NoteModel> notes =
-            BlocProvider.of<NotesCubit>(context).notes ?? [];
+            BlocProvider.of<NotesCubit>(context).notes;
         return Expanded(
           child: StaggeredGridView.countBuilder(
             physics: const BouncingScrollPhysics(),
