@@ -22,7 +22,7 @@ class NoteCard extends StatelessWidget {
           color: Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(16),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisSize: MainAxisSize.min,
@@ -30,7 +30,7 @@ class NoteCard extends StatelessWidget {
             ListTile(
               contentPadding: EdgeInsets.zero,
               title: Padding(
-                padding: const EdgeInsets.only(bottom: 24),
+                padding: const EdgeInsets.only(bottom: 12),
                 child: Text(
                   note.title,
                   style: Theme.of(context).textTheme.titleLarge,
@@ -44,7 +44,7 @@ class NoteCard extends StatelessWidget {
               ),
               trailing: IconButton(
                 icon: const Icon(Icons.delete_outline),
-                iconSize: 28,
+                iconSize: 24,
                 color: Theme.of(context).colorScheme.onSecondary,
                 onPressed: () {
                   showDialog(
