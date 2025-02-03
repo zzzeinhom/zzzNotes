@@ -1,4 +1,4 @@
-# NotesApp 📝
+# zzzNotes 📝
 
 A feature-rich note-taking application with category management, search functionality, and theme switching. Built with Flutter using BLoC state management and Hive local storage.
 
