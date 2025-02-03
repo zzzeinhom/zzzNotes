@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zzznotes/cubits/notes_cubit/notes_cubit.dart';
+import 'package:zzznotes/widgets/theme_button.dart';
 
 class NotesSearchBar extends StatefulWidget {
   const NotesSearchBar({super.key});
@@ -52,17 +53,11 @@ class _NotesSearchBarState extends State<NotesSearchBar> {
             ),
           ),
           Container(
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.secondary,
-              borderRadius: BorderRadius.all(Radius.circular(16)),
-            ),
-            child: IconButton(
-              icon: Icon(Icons.dark_mode_outlined),
-              color: Theme.of(context).colorScheme.onSecondary,
-              onPressed: () {},
-              iconSize: 32,
-            ),
-          ),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary,
+                borderRadius: BorderRadius.all(Radius.circular(16)),
+              ),
+              child: ThemeButton()),
         ],
       ),
     );

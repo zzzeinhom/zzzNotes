@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zzznotes/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:zzznotes/models/category_type.dart';
 import 'package:zzznotes/models/note_model.dart';
-import 'package:zzznotes/views/widgets/note_textfield.dart';
+import 'package:zzznotes/widgets/note_textfield.dart';
 
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({super.key});
@@ -48,7 +48,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
           const SizedBox(height: 24),
           NoteTextField(
               hintText: "Content",
-              maxLength: 500,
+              maxLength: 5000,
               maxLines: 2,
               hintStyle: Theme.of(context).textTheme.labelSmall,
               style: Theme.of(context).textTheme.titleSmall,

@@ -5,8 +5,10 @@ class NoteTextField extends StatelessWidget {
     super.key,
     required this.hintText,
     required this.style,
-    this.maxLength = 200,
-    this.maxLines = 1,
+    this.maxLength = 500,
+    this.maxLines,
+    this.scrollPhysics,
+    this.expands = false,
     this.onSaved,
     this.hintStyle,
     this.initialValue,
@@ -18,7 +20,9 @@ class NoteTextField extends StatelessWidget {
   final TextStyle? style;
   final TextStyle? hintStyle;
   final int maxLength;
-  final int maxLines;
+  final int? maxLines;
+  final bool expands;
+  final ScrollPhysics? scrollPhysics;
   final void Function(String?)? onSaved;
   final void Function(String?)? onChanged;
 
@@ -28,6 +32,8 @@ class NoteTextField extends StatelessWidget {
       onSaved: onSaved,
       maxLength: maxLength,
       maxLines: maxLines,
+      expands: expands,
+      scrollPhysics: scrollPhysics,
       initialValue: initialValue,
       onChanged: onChanged,
       validator: (value) {

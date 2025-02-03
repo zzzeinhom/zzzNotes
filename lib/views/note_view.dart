@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zzznotes/cubits/notes_cubit/notes_cubit.dart';
 import 'package:zzznotes/models/category_type.dart';
 import 'package:zzznotes/models/note_model.dart';
-import 'package:zzznotes/views/widgets/note_textfield.dart';
-import 'package:zzznotes/views/widgets/notes_app_bar.dart';
+import 'package:zzznotes/widgets/note_textfield.dart';
+import 'package:zzznotes/widgets/notes_app_bar.dart';
 
 class NoteView extends StatefulWidget {
   const NoteView({super.key, required this.note});
@@ -73,11 +73,11 @@ class _NoteViewState extends State<NoteView> {
             const SizedBox(height: 24),
             Expanded(
               child: NoteTextField(
-                maxLength: 500,
-                maxLines: MediaQuery.of(context).size.height ~/ 24,
+                maxLength: 5000,
                 hintText: "Content",
                 initialValue: widget.note.content,
                 style: Theme.of(context).textTheme.headlineSmall,
+                maxLines: null,
                 onChanged: (value) {
                   widget.note.content = value!;
                 },

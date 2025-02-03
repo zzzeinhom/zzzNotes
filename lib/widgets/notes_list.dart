@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:zzznotes/cubits/notes_cubit/notes_cubit.dart';
 import 'package:zzznotes/models/note_model.dart';
-import 'package:zzznotes/views/widgets/note_card.dart';
+import 'package:zzznotes/widgets/note_card.dart';
 
 class NotesList extends StatelessWidget {
   const NotesList({super.key});
@@ -14,7 +14,6 @@ class NotesList extends StatelessWidget {
       builder: (context, state) {
         List<NoteModel> notes =
             BlocProvider.of<NotesCubit>(context).notes ?? [];
-        debugPrint("Notes: $notes");
         return Expanded(
           child: StaggeredGridView.countBuilder(
             physics: const BouncingScrollPhysics(),

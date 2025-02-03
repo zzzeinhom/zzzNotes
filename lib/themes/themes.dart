@@ -1,5 +1,77 @@
 import 'package:flutter/material.dart';
 
+ThemeData lightTheme = ThemeData(
+    brightness: Brightness.light,
+    colorScheme: ColorScheme.light(
+        surface: Colors.white,
+        primary: Color(0xFFF0F4F9),
+        secondary: Color.fromARGB(255, 231, 238, 243),
+        onSurface: Colors.black,
+        onPrimary: Colors.black,
+        onSecondary: Color(0xFF9B9EA6)),
+    textTheme: TextTheme(
+      headlineLarge: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      headlineMedium: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      headlineSmall: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      bodyLarge: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.normal,
+        color: Colors.black,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.normal,
+        color: Colors.black,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.normal,
+        color: Colors.black,
+      ),
+      titleLarge: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      titleSmall: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      labelLarge: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.normal,
+        color: Color(0xFF9B9EA6),
+      ),
+      labelMedium: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.normal,
+        color: Color(0xFF9B9EA6),
+      ),
+      labelSmall: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.normal,
+        color: Color(0xFF9B9EA6),
+      ),
+    ));
+
 ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     colorScheme: ColorScheme.dark(

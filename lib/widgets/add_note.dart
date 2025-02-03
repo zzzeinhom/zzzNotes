@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:zzznotes/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:zzznotes/cubits/notes_cubit/notes_cubit.dart';
-import 'package:zzznotes/views/widgets/add_note_form.dart';
-import 'package:zzznotes/views/widgets/note_textfield.dart';
+import 'package:zzznotes/widgets/add_note_form.dart';
+import 'package:zzznotes/widgets/note_textfield.dart';
 
 class AddNoteSheet extends StatelessWidget {
   const AddNoteSheet({super.key});
