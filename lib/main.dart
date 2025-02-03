@@ -15,7 +15,7 @@ void main() async {
   Bloc.observer = NotesBlocObserver();
   runApp(BlocProvider(
     create: (context) => ThemeCubit()..setInitialTheme(),
-    child: ZZZNaotes(),
+    child: const ZZZNaotes(),
   ));
 }
 
@@ -32,7 +32,7 @@ class ZZZNaotes extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: state.themeData,
             color: Theme.of(context).colorScheme.primary,
-            home: NotesView(),
+            home: const NotesView(),
           ),
         );
       },

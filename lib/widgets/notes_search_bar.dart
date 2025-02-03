@@ -20,7 +20,7 @@ class _NotesSearchBarState extends State<NotesSearchBar> {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primary,
-        borderRadius: BorderRadius.all(Radius.circular(16)),
+        borderRadius: const BorderRadius.all(Radius.circular(16)),
       ),
       child: Row(
         children: [
@@ -33,7 +33,7 @@ class _NotesSearchBarState extends State<NotesSearchBar> {
                 color: Theme.of(context).colorScheme.onSecondary,
                 size: 28,
               )),
-          SizedBox(width: 16),
+          const SizedBox(width: 16),
           Expanded(
             child: TextField(
               style: Theme.of(context).textTheme.bodyLarge,
@@ -55,9 +55,9 @@ class _NotesSearchBarState extends State<NotesSearchBar> {
           Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.secondary,
-                borderRadius: BorderRadius.all(Radius.circular(16)),
+                borderRadius: const BorderRadius.all(Radius.circular(16)),
               ),
-              child: ThemeButton()),
+              child: const ThemeButton()),
         ],
       ),
     );

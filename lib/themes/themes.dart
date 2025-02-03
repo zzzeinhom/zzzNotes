@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    colorScheme: ColorScheme.light(
+    colorScheme: const ColorScheme.light(
         surface: Colors.white,
         primary: Color(0xFFF0F4F9),
         secondary: Color.fromARGB(255, 231, 238, 243),
         onSurface: Colors.black,
         onPrimary: Colors.black,
         onSecondary: Color(0xFF9B9EA6)),
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       headlineLarge: TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.bold,
@@ -74,7 +74,7 @@ ThemeData lightTheme = ThemeData(
 
 ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
-    colorScheme: ColorScheme.dark(
+    colorScheme: const ColorScheme.dark(
       surface: Color(0xFF0D1333),
       primary: Color(0xFF252948),
       secondary: Color(0xFF383D57),
@@ -82,7 +82,7 @@ ThemeData darkTheme = ThemeData(
       onPrimary: Colors.white,
       onSecondary: Color(0xFF6E738F),
     ),
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       headlineLarge: TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.bold,

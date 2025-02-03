@@ -35,7 +35,7 @@ class _NoteViewState extends State<NoteView> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             NotesAppBar(
               title: widget.note.title,
               icon: Icons.check_outlined,

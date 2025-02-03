@@ -7,6 +7,7 @@ environment:
   sdk: ^3.6.1
 
 dependencies:
+  bloc: ^9.0.0
   flutter:
     sdk: flutter
   flutter_bloc: ^9.0.0
@@ -14,6 +15,7 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   intl: ^0.20.2
+  meta: ^1.15.0
   modal_progress_hud_nsn: ^0.5.1
   shared_preferences: ^2.5.1
 

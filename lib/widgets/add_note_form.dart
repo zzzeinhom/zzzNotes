@@ -96,10 +96,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     minimumSize: Size(MediaQuery.of(context).size.width, 48),
                   ),
                   child: state is AddNoteLoading
-                      ? SizedBox(
+                      ? const SizedBox(
                           height: 24,
                           width: 24,
-                          child: const CircularProgressIndicator())
+                          child: CircularProgressIndicator())
                       : const Text('Add Note'),
                 ),
               );
